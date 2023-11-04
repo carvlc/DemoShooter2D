@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 {
     // se declara un atributo Player
     private Player player;
-    [SerializeField]private GameObject shuriken;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             // es un metodo que permite instanciar gameObjects
-            Instantiate(shuriken, transform.position + new Vector3(0,1,0), quaternion.identity);
+            player.Fire();
         }
     }
 

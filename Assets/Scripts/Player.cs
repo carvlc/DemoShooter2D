@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed;
     private float limitRangeX;
     private float limitRangeY;
+    private SpawnerShuriken spawnerShuriken;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
         speed = 10f;
         limitRangeX = 8f;
         limitRangeY = 4.15f;
+        spawnerShuriken = gameObject.GetComponentInChildren<SpawnerShuriken>();
     }
 
     // Update is called once per frame
@@ -54,5 +56,10 @@ public class Player : MonoBehaviour
         {
         transform.Translate(Vector3.up * speed * verticalInput * Time.deltaTime);
         }
+    }
+
+    // metodo de disparo
+    public void Fire(){
+        spawnerShuriken.CreateBullet();
     }
 }
