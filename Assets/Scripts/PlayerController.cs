@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // se declara un atributo Player
     [SerializeField] private Player player;
     // Start is called before the first frame update
     void Start()
     {
+        // inicializamos el objeto player
         player = GetComponent<Player>();// obtenermos el componente player de this gameobject
     }
 
@@ -16,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         CaptureInput();
     }
-
+// metodo para caturar los imput y mover al player mediante el metodo Move() del objeto Player
     public void CaptureInput()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
