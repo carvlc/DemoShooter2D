@@ -10,15 +10,20 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Hello ");
         transform.position = Vector3.zero;// new Vector3(0,0,0);
-        speed = 4f;
+        speed = 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Move();
+    }
+
+    public void Move()
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * speed * horizontalInput*  Time.deltaTime );
-        transform.Translate(Vector3.up * speed * verticalInput *  Time.deltaTime );
+        transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
+        transform.Translate(Vector3.up * speed * verticalInput * Time.deltaTime);
     }
 }
