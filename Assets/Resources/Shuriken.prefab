@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7879115359561047696}
   - component: {fileID: 8133780333307348893}
+  - component: {fileID: -2751715324328354976}
   m_Layer: 0
-  m_Name: shuriken
+  m_Name: Shuriken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2751715324328354976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052053368496584488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b675cdef925b4234fb7ed668f534e119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7.62
