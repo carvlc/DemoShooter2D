@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // declaramos atributo speed (velocidad) de tipo float
     [SerializeField] private float speed;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
 
     public void Move(float horizontalInput, float verticalInput)
     {
+        /* mediante el componente transform y su propiedad Translate movemos al personaje
+        usando los valore pasados por parametro horizontalInput y verticalInput*/
         transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
         transform.Translate(Vector3.up * speed * verticalInput * Time.deltaTime);
     }
